@@ -25,22 +25,22 @@ function onClick(evt) {
   }
   const imageSrc = evt.target.dataset.source;
   const instance = basicLightbox.create(`<img src=${imageSrc} width="800" height="600"/>`, {
+    handler: null,
     onShow: (instance) => {
-      window.addEventListener("keydown", (evt) => {
-        if (evt.code === "Escape") {
-          instance.close();
-        }
-      });
+      this.handler = closeModal.bind(instance);
+      document.addEventListener("keydown", this.handler);
     },
-    onClose: (instance) => {
-      window.removeEventListener("keydown", (evt) => {
-        if (evt.code === "Escape") {
-          instance.close();
-        }
-      });
+    onClose: () => {
+      document.removeEventListener("keydown", this.handler);
     },
   });
   instance.show();
+}
+
+function closeModal(evt) {
+  if (evt.code === "Escape") {
+    this.close();
+  }
 }
 
 console.log(galleryItems);
