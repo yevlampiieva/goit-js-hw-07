@@ -54,6 +54,8 @@ body {
   line-height: 1.5;
 }
 
+/* Task-1 */
+
 #categories {
   display: flex;
   flex-direction: column;
@@ -93,3 +95,22 @@ body {
   color: #2e2f42;
   padding: 8px 16px;
 }
+
+/* Task-2 */
+.gallery {
+  padding: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 48px;
+  column-gap: 24px;
+}
+
+.gallery-item {
+  width: calc((100% - 48px) / 3);
+}
+
+.gallery-item img {
+  height: 100%;
+}
+
+/* Task-3 */
