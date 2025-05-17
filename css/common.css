@@ -185,6 +185,39 @@ body {
 }
 
 .login-form button:hover,
-.login-form button:focus {
+.login-form button:focus,
+.change-color:hover,
+.change-color:focus {
   background-color: #6c8cff;
+}
+
+/* Task-5 */
+.widget {
+  margin-top: 24px;
+}
+
+.widget p {
+  text-align: center;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  margin-bottom: 16px;
+}
+
+.change-color {
+  display: block;
+  margin: 0 auto;
+  border: transparent;
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 148px;
+  height: 40px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+  background-color: #4e75ff;
 }
